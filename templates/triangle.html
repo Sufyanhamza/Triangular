@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Triangle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="triangle-container">
+        <h1>Check Triangle</h1>
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+        <form method="POST" action="/check-triangle">
+            <div class="form-group">
+                <label for="a">Enter number a:</label>
+                <input type="number" step="any" id="a" name="a" required>
+            </div>
+            <div class="form-group">
+                <label for="b">Enter number b:</label>
+                <input type="number" step="any" id="b" name="b" required>
+            </div>
+            <div class="form-group">
+                <label for="c">Enter number c:</label>
+                <input type="number" step="any" id="c" name="c" required>
+            </div>
+            <button type="submit" class="btn">Check</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Result</h1>
+        <p>Numbers {{ a }}, {{ b }}, {{ c }} {% if is_triangle %} can form a triangle. {% else %} cannot form a triangle. {% endif %}</p>
+        <a href="{{ url_for('triangle') }}" class="btn">Try Again</a>
+    </div>
+</body>
+</html>
